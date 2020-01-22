@@ -1,0 +1,15 @@
+
+<h3>Todo List </h3>
+<ul class="list" *ngFor="let list of todoList">
+  <li class="list-item">
+    <input type="checkbox" class="check_box" id="{{list?.id}}" />
+    <label for="{{list?.id}}">
+      <!-- <span class="check--label-box"></span> -->
+     {{list.title}}
+    </label>
+  </li>
+</ul>
+
+<div class="footer-icon" (click)="addNewTodoList()">
+  <img src="../../assets/add-icon.svg">
+</div>

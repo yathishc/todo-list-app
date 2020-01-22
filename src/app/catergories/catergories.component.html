@@ -1,0 +1,20 @@
+<nav role="navigation" [ngClass]="{'close': !isMenuOpen, 'nav': true}">
+  <ul>
+  <li *ngFor="let category of categories; index as i" class="categories">
+    <span [routerLink]="['/group', i]">{{category.name}}
+    </span> <img src="../../assets/delete-icon.svg">
+  </li>
+</ul>
+</nav>
+
+<div class="header-display">
+  <h2>Categories App</h2>
+  <div class="burger" (click)="menuState()">
+    <img src="../../assets/menu-icon.svg">
+  </div>
+</div>
+
+
+<div class="footer-icon" (click)="addNewCategory()">
+  <img src="../../assets/add-icon.svg">
+</div>
